@@ -20,13 +20,13 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "kevinandres@ieee.org",
-    action: () => (window.location.href = "mailto:kevinandres@ieee.org"),
+    description: "kevinbermudez@unicauca.edu.co",
+    action: () => (window.location.href = "mailto:kevinbermudez@unicauca.edu.co"),
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Location",
-    description: "Popayan Colombia ",
+    description: "Popayan-Colombia ",
     action: () =>
       window.open(""),
   },

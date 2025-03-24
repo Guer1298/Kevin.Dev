@@ -13,51 +13,44 @@ import {
 } from "./ui/sheet";
 
 const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "about",
-    path: "/about",
-  },
-  {
-    name: "projects",
-    path: "/projects",
-  },
-  {
-    name: "blog",
-    path: "/blog",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "Blog", path: "/blog" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const MobileNav = () => {
   const pathname = usePathname();
+
   return (
     <Sheet>
-      <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-accent" />
+      <SheetTrigger
+        aria-label="Abrir menú de navegación"
+        className="flex items-center justify-center text-accent hover:opacity-80 transition"
+      >
+        <CiMenuFries className="text-3xl" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
-        <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
+
+      <SheetContent side="left" className="flex flex-col bg-black text-white">
+        <SheetTitle className="sr-only">Menú móvil</SheetTitle>
         <SheetDescription className="sr-only">
-          Navigate through the site using the links below.
+          Navega por las secciones del sitio.
         </SheetDescription>
-        {/* nav */}
-        <nav className="flex flex-col justify-center items-center gap-8 m-auto">
-          {links.map((link, index) => {
+
+        <nav className="flex flex-col gap-6 justify-center items-center h-full">
+          {links.map((link) => {
+            const isActive = pathname === link.path;
             return (
               <Link
+                key={link.path}
                 href={link.path}
-                key={index}
-                className={`${
-                  link.path === pathname &&
-                  "text-accent border-b-2 border-accent"
-                } text-2xl hover:text-accent transition-all capitalize`}
+                className={`text-xl font-medium capitalize transition-all ${
+                  isActive
+                    ? "text-accent border-b-2 border-accent"
+                    : "text-white hover:text-accent"
+                }`}
+                aria-current={isActive ? "page" : undefined}
               >
                 {link.name}
               </Link>

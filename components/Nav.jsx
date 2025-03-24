@@ -4,40 +4,29 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "about",
-    path: "/about",
-  },
-  {
-    name: "projects",
-    path: "/projects",
-  },
-  {
-    name: "blog",
-    path: "/blog",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "Blog", path: "/blog" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const Nav = () => {
   const pathname = usePathname();
+
   return (
-    <nav className="flex gap-8 font-bold">
-      {links.map((link, index) => {
+    <nav className="flex gap-6 text-sm xl:text-base font-semibold tracking-wide">
+      {links.map((link) => {
+        const isActive = pathname === link.path;
+
         return (
           <Link
+            key={link.path}
             href={link.path}
-            key={index}
-            className={`${
-              link.path === pathname && "text-accent border-b-2 border-accent"
-            } font-bold hover:text-accent transition-all capitalize`}
+            aria-current={isActive ? "page" : undefined}
+            className={`transition-all capitalize hover:text-accent ${
+              isActive ? "text-accent border-b-2 border-accent pb-1" : "text-white"
+            }`}
           >
             {link.name}
           </Link>
