@@ -1,0 +1,3 @@
+# Evitar subir archivos generados
+.next/
+node_modules/
