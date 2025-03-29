@@ -7,17 +7,17 @@ const projects = [
   {
     title: "Portafolio Personal",
     description:
-      "Diseño limpio, navegación suave y enfoque UX-first para contar quién soy.",
+      "Diseño limpio, animaciones sutiles y estructura UX-first para reflejar mi identidad profesional. Cada sección está pensada como un pitch interactivo.",
   },
   {
     title: "Dashboard Analítico",
     description:
-      "UI intuitiva y visualización de datos para toma de decisiones inteligentes.",
+      "Plataforma modular con autenticación, filtros dinámicos y gráficos de impacto. Ideal para visualizar KPIs y transformar datos en decisiones.",
   },
   {
     title: "Tienda eCommerce Minimal",
     description:
-      "Experiencia de compra fluida, diseño responsive y gestión de productos eficiente.",
+      "Arquitectura optimizada para conversión: navegación fluida, lógica de carrito eficiente y sistema de gestión de productos escalable.",
   },
 ];
 
@@ -25,7 +25,7 @@ const Projects = () => {
   return (
     <section className="bg-black text-white py-28 px-6">
       <div className="container mx-auto max-w-6xl">
-        {/* Título */}
+        {/* Encabezado */}
         <motion.div
           variants={fadeIn("up", 0.2)}
           initial="hidden"
@@ -37,10 +37,9 @@ const Projects = () => {
             Proyectos Destacados
           </h2>
           <p className="text-white/50 mt-4 text-base">
-            Una muestra de ideas convertidas en productos funcionales y elegantes.
+            Una selección de soluciones reales donde combiné diseño, código y estrategia.
           </p>
 
-          {/* Frase impactante */}
           <motion.p
             variants={fadeIn("up", 0.25)}
             initial="hidden"
@@ -48,11 +47,11 @@ const Projects = () => {
             viewport={{ once: true, amount: 0.2 }}
             className="text-xl text-white/80 max-w-3xl mx-auto mt-8 leading-relaxed"
           >
-            No diseño por estética, diseño para transformar. Cada línea de código, cada elección de color y cada microinteracción cuentan una historia: la de un usuario que no solo ve, sino que <span className="text-accent font-semibold">siente</span> lo que construimos.
+            <span className="text-accent font-medium">Cada proyecto resuelve un problema.</span> No construyo por construir: investigo, estructuro, prototipo y ejecuto con precisión. Lo estético nace del propósito, y el propósito, del usuario.
           </motion.p>
         </motion.div>
 
-        {/* Proyectos */}
+        {/* Grid de Proyectos */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <motion.div
