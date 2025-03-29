@@ -4,32 +4,24 @@ import React from "react";
 
 const GitHubActionsCiCd = () => {
   return (
-    <>
-      <p className="lead mb-6">
-        Uno de los mayores avances en mi flujo de trabajo ha sido implementar
-        pipelines de <strong>CI/CD</strong> con GitHub Actions. En este artículo
-        te muestro cómo configuro un flujo de despliegue continuo para asegurar
-        entregas consistentes, automáticas y seguras en mis proyectos alojados
-        en <strong>Vercel</strong>.
+    <article className="prose prose-invert lg:prose-lg max-w-none text-white/90 prose-h2:text-accent prose-strong:text-white prose-li:marker:text-accent prose-code:bg-zinc-800 prose-code:text-white prose-code:px-2 prose-code:py-1 prose-code:rounded-md prose-ul:pl-6 prose-p:leading-relaxed">
+      <p>
+        Uno de los mayores avances en mi enfoque como ingeniero de software ha sido integrar pipelines de <strong>CI/CD</strong> con GitHub Actions. Este artículo es una guía práctica, pero también una reflexión sobre cómo automatizar procesos eleva la calidad, velocidad y confiabilidad de nuestros despliegues en entornos reales como <strong>Vercel</strong>.
       </p>
 
-      <h2>🚧 ¿Por qué CI/CD?</h2>
+      <h2>🚧 ¿Por qué CI/CD en serio?</h2>
       <p>
-        Como desarrollador y líder técnico, me esfuerzo por entregar software de
-        forma ágil sin sacrificar calidad. Automatizar pruebas, builds y
-        despliegues me permite:
+        Como desarrollador con mentalidad de producto, sé que la calidad no se prueba al final, se cultiva desde el inicio. Un pipeline bien diseñado me permite:
       </p>
       <ul>
-        <li>Reducir errores humanos en producción</li>
-        <li>Recibir feedback más rápido</li>
-        <li>Escalar sin fricción con otros colaboradores</li>
+        <li>Detectar errores antes de que lleguen al usuario</li>
+        <li>Reducir el costo del cambio con feedback inmediato</li>
+        <li>Consolidar flujos colaborativos predecibles y escalables</li>
       </ul>
 
-      <h2>🔧 Configurando GitHub Actions desde cero</h2>
+      <h2>🔧 GitHub Actions: CI/CD como parte del ADN</h2>
       <p>
-        En la raíz del repositorio creo un archivo YAML dentro de
-        <code>.github/workflows/ci-cd.yml</code>. Este pipeline básico se activa
-        con cada push a <code>main</code>:
+        En cada nuevo proyecto, configuro un flujo base en <code>.github/workflows/ci-cd.yml</code>. Así luce un pipeline que utilizo como estándar para entornos con Next.js y despliegue en Vercel:
       </p>
 
       <pre className="bg-black/80 text-white p-4 rounded-md overflow-x-auto text-sm">
@@ -75,51 +67,51 @@ jobs:
 `}</code>
       </pre>
 
-      <h2>🧠 ¿Qué hace este pipeline?</h2>
+      <h2>🧠 ¿Qué automatiza este pipeline?</h2>
       <ul>
-        <li><strong>Clona</strong> el repo automáticamente</li>
-        <li>Instala dependencias con <code>npm install</code></li>
-        <li>Ejecuta <code>eslint</code> para validar estilo y errores</li>
-        <li>Corre los <strong>tests</strong> unitarios</li>
-        <li>Genera el <code>build</code> de producción</li>
-        <li>Realiza <strong>deploy automático</strong> a Vercel</li>
+        <li><strong>Clonado del repo</strong> con control de versiones limpio</li>
+        <li><strong>Instalación y validación</strong> de dependencias con <code>npm</code></li>
+        <li>Revisión de estilo con <strong>ESLint</strong></li>
+        <li>Ejecución de <strong>unit tests</strong></li>
+        <li>Build de producción optimizado</li>
+        <li><strong>Deploy continuo</strong> a Vercel con control de versiones y rollback disponibles</li>
       </ul>
 
-      <h2>🔐 Seguridad con secrets</h2>
+      <h2>🔐 Seguridad profesional con GitHub Secrets</h2>
       <p>
-        Los valores sensibles como <code>VERCEL_TOKEN</code> o IDs de proyecto
-        se almacenan en el apartado de <strong>Settings → Secrets</strong> del
-        repositorio. Esto evita exponer credenciales y permite mantener el
-        pipeline reutilizable.
+        Tokens y credenciales sensibles no se hardcodean jamás. Uso variables seguras desde <strong>Settings → Secrets</strong> para mantener el flujo limpio, escalable y protegido frente a ataques o leaks de credenciales.
       </p>
 
-      <h2>🧪 Mejores prácticas adicionales</h2>
+      <h2>🧪 Buenas prácticas que aplico siempre</h2>
       <ul>
-        <li>Configurar entornos de preview en ramas con Pull Requests</li>
-        <li>Agregar pruebas e2e con Playwright o Cypress</li>
-        <li>Notificaciones de éxito/fallo vía Slack o Discord</li>
-        <li>Publicar coverage en Codecov</li>
+        <li><strong>Previews automáticos</strong> por cada Pull Request</li>
+        <li><strong>Tests e2e</strong> en flows críticos con Playwright o Cypress</li>
+        <li><strong>Alertas</strong> en Slack o Discord sobre el estado del deploy</li>
+        <li>Publicación de <strong>coverage reports</strong> en Codecov</li>
       </ul>
 
-      <h2>📦 ¿Por qué Vercel?</h2>
+      <h2>📦 ¿Por qué Vercel en mi stack?</h2>
       <p>
-        Vercel es ideal para proyectos en <strong>Next.js</strong>. Ofrece
-        previews automáticos, integración con GitHub y rendimiento optimizado
-        desde el primer despliegue. Combinado con Actions, el despliegue se
-        vuelve completamente transparente.
+        Vercel potencia mis proyectos en Next.js gracias a:
+      </p>
+      <ul>
+        <li>Integración nativa con GitHub</li>
+        <li>Previews instantáneos por rama</li>
+        <li>Infraestructura edge lista para escalar</li>
+      </ul>
+      <p>
+        Con GitHub Actions, convierto a Vercel en una pieza más dentro del ciclo de entrega automatizado.
       </p>
 
-      <h2>⚡ Conclusión</h2>
+      <h2>⚡ Conclusión: entrega continua = confianza continua</h2>
       <p>
-        Implementar CI/CD no es un lujo: es una inversión en calidad, velocidad
-        y profesionalismo. Si lideras proyectos o trabajas en equipo, automatizar
-        tu flujo de despliegue con GitHub Actions te permite escalar sin perder
-        el control.
+        Para mí, CI/CD no es un plus técnico. Es una <strong>postura profesional</strong>. Automatizar desde el día uno me permite centrarme en lo importante: construir productos de calidad, con rapidez, seguridad y visión a futuro.
       </p>
-      <p className="mt-4">
-        🚀 <strong>Automatiza, entrega con confianza y enfócate en crear.</strong>
+
+      <p className="mt-4 italic text-white/60">
+        🚀 Automatizar tu despliegue es el primer paso para escalar tu impacto como desarrollador.
       </p>
-    </>
+    </article>
   );
 };
 

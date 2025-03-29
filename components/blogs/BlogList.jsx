@@ -14,7 +14,7 @@ const blogPosts = [
     title: "🧠 Cómo estructuro un proyecto desde cero: del concepto al deploy",
     description:
       "Desde Notion hasta Vercel. Te muestro cómo llevo una idea desde su concepción hasta un producto profesional en producción. Diseño, arquitectura, testing y automatización real.",
-    image: "/assets/blogs/project-flow.jpg",
+    image: "/assets/blogs/project-flow.webp",
     link: "/blog/from-idea-to-deploy",
     tags: ["Gestión", "Desarrollo", "CI/CD", "Vercel", "Docker"],
   },
@@ -24,7 +24,7 @@ const blogPosts = [
     title: "🧪 Cómo implementé CI/CD usando GitHub Actions y Vercel",
     description:
       "Automatiza tu flujo de despliegue con GitHub Actions. Te explico cómo orquesto builds, tests, preview y producción para asegurar releases consistentes.",
-    image: "/assets/blogs/github-actions.jpg",
+    image: "/assets/blogs/github.webp",
     link: "/blog/github-actions-cicd",
     tags: ["CI/CD", "GitHub Actions", "Vercel", "DevOps"],
   },
@@ -34,7 +34,7 @@ const blogPosts = [
     title: "🧭 Organizando equipos con Notion, Scrum y Kanban",
     description:
       "Gestionar bien un equipo técnico es clave. Te muestro cómo planifico sprints, asigno tareas y hago seguimiento con métricas usando herramientas ágiles.",
-    image: "/assets/blogs/project-management.jpg",
+    image: "/assets/blogs/scrum.webp",
     link: "/blog/scrum-kanban-notion",
     tags: ["Project Management", "Scrum", "Kanban", "Notion"],
   },
@@ -44,7 +44,7 @@ const blogPosts = [
     title: "⚔️ Retos técnicos que enfrenté desarrollando un sistema de autenticación",
     description:
       "Autenticación segura no es trivial. Te comparto problemas reales con JWT, refresh tokens, seguridad y cómo los resolví en producción.",
-    image: "/assets/blogs/auth-issues.jpg",
+    image: "/assets/blogs/reto.jpeg",
     link: "/blog/authentication-challenges",
     tags: ["Seguridad", "Node.js", "JWT", "Backend"],
   },
@@ -54,7 +54,7 @@ const blogPosts = [
     title: "🌍 Construyendo mi marca personal como desarrollador y líder técnico",
     description:
       "No todo es código. Hablo sobre cómo defino mi visión de carrera, selecciono proyectos con propósito y uso mi portafolio como herramienta de posicionamiento profesional.",
-    image: "/assets/blogs/personal-brand.jpg",
+    image: "/assets/blogs/marcapersonal.webp",
     link: "/blog/brand-growth",
     tags: ["Carrera", "Marca Personal", "Desarrollo", "Liderazgo"],
   },
