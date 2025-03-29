@@ -4,38 +4,37 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/lib/variants";
 
 const workflowSteps = [
-    {
-      icon: "🧭",
-      title: "Análisis de Requisitos",
-      desc: "Colaboro con stakeholders para entender objetivos, usuarios, limitaciones y criterios de éxito.",
-    },
-    {
-      icon: "🏗️",
-      title: "Diseño de Arquitectura",
-      desc: "Defino estructuras escalables y patrones sólidos: bases de datos, APIs, componentes y flujos.",
-    },
-    {
-      icon: "💻",
-      title: "Desarrollo de Software",
-      desc: "Implemento con código limpio, modular, siguiendo principios SOLID, CI/CD y buenas prácticas.",
-    },
-    {
-      icon: "🧪",
-      title: "Testing Automatizado",
-      desc: "Integro pruebas unitarias, de integración y end-to-end para garantizar calidad y confiabilidad.",
-    },
-    {
-      icon: "🚀",
-      title: "Deploy y DevOps",
-      desc: "Automatizo builds, releases y monitoreo en producción. Escalabilidad, logging y alertas activas.",
-    },
-    {
-      icon: "🔁",
-      title: "Iteración y Mejora",
-      desc: "Recojo métricas, feedback de usuarios y datos en producción para optimizar continuamente.",
-    },
-  ];
-  
+  {
+    icon: "🧭",
+    title: "Análisis Estratégico",
+    desc: "Más que recolectar requisitos: identifico el propósito del producto, alineo expectativas y traduzco desafíos en objetivos accionables.",
+  },
+  {
+    icon: "🏗️",
+    title: "Arquitectura Escalable",
+    desc: "Diseño sistemas pensados para crecer: componentes modulares, flujos mantenibles y decisiones técnicas orientadas a largo plazo.",
+  },
+  {
+    icon: "💻",
+    title: "Desarrollo Profesional",
+    desc: "Construyo con foco en performance, mantenibilidad y accesibilidad. Clean code, SOLID, testing y control de versiones efectivos.",
+  },
+  {
+    icon: "🧪",
+    title: "Calidad Automatizada",
+    desc: "Incorporo testing desde el inicio (unitario, integración, e2e) y herramientas de linting para mantener estándares sin fricción.",
+  },
+  {
+    icon: "🚀",
+    title: "Entrega Continua",
+    desc: "CI/CD con GitHub Actions, builds reproducibles y despliegue seguro con Vercel, Docker o pipelines personalizados.",
+  },
+  {
+    icon: "🔁",
+    title: "Iteración con Impacto",
+    desc: "Uso feedback real, analíticas y métricas de negocio para refinar. Cada versión es una oportunidad para mejorar valor y experiencia.",
+  },
+];
 
 const WorkflowSection = () => {
   return (
@@ -50,10 +49,10 @@ const WorkflowSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight">
-            Proceso de Trabajo
+            Mi Proceso
           </h2>
           <p className="text-white/50 mt-4 text-base max-w-xl mx-auto">
-            Cada proyecto es una historia, y cada historia tiene su ritmo, su lógica y su impacto. Así abordo la construcción de experiencias digitales.
+            No escribo código por escribir. Construyo con intención. Este es el flujo que aplico para transformar ideas en productos que resuelven, escalan y conectan.
           </p>
         </motion.div>
 
@@ -80,7 +79,7 @@ const WorkflowSection = () => {
         </div>
 
         <p className="text-center text-white/30 italic mt-20 text-sm">
-          No se trata solo de hacer software. Se trata de construir experiencias que dejen huella.
+          Un gran producto no nace por accidente. Nace de un proceso consciente, enfocado y profundamente humano.
         </p>
       </div>
     </section>
